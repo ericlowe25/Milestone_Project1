@@ -1,4 +1,24 @@
 import Deck from "./deck.js"
 
-const deck = new Deck()
-console.log(deck.cards)
+const computerCardSlot = document.querySelector(".computer-card-slot")
+
+let playerDeck, computerDeck
+
+startGame()
+function startGame() {
+    const deck = new Deck()
+    deck.shuffle()
+
+    const deckMidpoint = Math.ceil(deck.numberOfCards / 2)
+    playerDeck = new Deck(deck.cards.slice(0, deckMidpoint))
+    computerDeck = new Deck(deck.cards.slice(deckMidpoint, deck.numberOfCards))
+
+    // console.log(playerDeck)
+    // console.log(computerDeck)
+    cleanBeforeRound()
+}
+
+//** computerCardSlot.appendChild(eck.cards[0].getHTML())
+function cleanBeforeRound() {
+    
+}
