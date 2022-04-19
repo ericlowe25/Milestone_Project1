@@ -5,6 +5,7 @@
 body {
     margin: 0;
     background-color: black;
+    overflow: hidden;
 }
 
 .paddle {
@@ -46,7 +47,7 @@ body {
     justify-content: center;
     font-weight: bold;
     font-size: 7vh;
-    color: whitesmoke;
+    color: aqua;
 }
 
 .score > * {
